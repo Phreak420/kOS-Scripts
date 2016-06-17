@@ -6,8 +6,7 @@
 
 Function circularize { // This is for doing the maths of figuring out circular orbit velocity.
 	set Rad to BODY:RADIUS + APOAPSIS.
-	set Gu to body:mu/(BODY:RADIUS + APOAPSIS)^2.
-	set h to APOAPSIS.
+	set Gu to body:mu.
 	set SMA to SHIP:OBT:SEMIMAJORAXIS.
 	
 	set circV to sqrt(Gu/Rad+h). //Calculating velocity needed to circularize at apoapsis
