@@ -3,28 +3,28 @@
 //Author: Phreak420 
 //Credit: CheersKevinGames (Youtuber)
 
-//SET burnoutCheck TO "reset".
-//FUNCTION mnv_burnout {
-//  PARAMETER autoStage.
-//
-//  IF burnoutCheck = "reset" {
-//    SET burnoutCheck TO MAXTHRUST.
-//    RETURN FALSE.
-//  }
-//
-//  IF burnoutCheck - MAXTHRUST > 10 {
-//    IF autoStage {
-//      SET currentThrottle TO THROTTLE.
-//      LOCK THROTTLE TO 0.
-//      WAIT 1. STAGE. WAIT 1.
-//      LOCK THROTTLE TO currentThrottle.
-//    }
-//    SET burnoutCheck TO "reset".
-//    RETURN TRUE.
-//  }
-//
-//  RETURN FALSE.
-//}
+SET burnoutCheck TO "reset".
+FUNCTION mnv_burnout {
+  PARAMETER autoStage.
+
+  IF burnoutCheck = "reset" {
+    SET burnoutCheck TO MAXTHRUST.
+    RETURN FALSE.
+  }
+
+  IF burnoutCheck - MAXTHRUST > 10 {
+    IF autoStage {
+      SET currentThrottle TO THROTTLE.
+      LOCK THROTTLE TO 0.
+      WAIT 1. STAGE. WAIT 1.
+      LOCK THROTTLE TO currentThrottle.
+    }
+    SET burnoutCheck TO "reset".
+    RETURN TRUE.
+  }
+
+  RETURN FALSE.
+}
 FUNCTION mnv_hohmann_dv {
   PARAMETER desiredAltitude.
 
