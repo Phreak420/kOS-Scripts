@@ -1,8 +1,7 @@
 // lib.node v1.0.0 
 // This library will be for creating nodes for maneuver to execute
 // Author: Phreak420
-// Credit: kOS Reddit community and CheersKevinGames (Youtube)
-//@LAZYGLOBAL off.
+// Credit: kOS Reddit community, Orbital Mechanics Wiki, and CheersKevinGames (Youtube)
 
 
 Function circularize { // This is for doing the maths of figuring out circular orbit velocity.
@@ -18,17 +17,5 @@ Function circularize { // This is for doing the maths of figuring out circular o
 	set circNode to node((TIME:SECONDS + ETA:APOAPSIS), 0, 0, DV).
 	add circNode.
 }
-
-
-
-// v = sqrt(GM/r) This is the calculation for orbital velocity at a given altitude
- // set deltaV to (orbitalVelocity - apVelocity).
-
-// This calculation should be telling me my velocity at apoapsis.
-//set G to SHIP:ORBIT:BODY:MU / (BODY:RADIUS + APOAPSIS)^2.
-//set R to BODY:RADIUS + APOAPSIS.
-//set A to ORBIT:SEMIMAJORAXIS.
-//set V to SQRT(G * ((2/R) - (1/A))).
-//print V.
 
 
