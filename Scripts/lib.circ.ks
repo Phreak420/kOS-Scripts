@@ -1,4 +1,4 @@
-// lib.node v1.0.0 
+// lib.circ v1.0.0 
 // This library will be for creating nodes for maneuver to execute
 // Author: Phreak420
 // Credit: kOS Reddit community, Orbital Mechanics Wiki, and CheersKevinGames (Youtube)
